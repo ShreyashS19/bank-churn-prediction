@@ -7,6 +7,7 @@ def preprocess_data(df):
     
     # Ensure correct column types
     categorical_cols = ['Gender', 'Education', 'Marital_Status', 'Income', 'Card_Category']
+    
     numerical_cols = ['Age', 'Dependent_count', 'Months_on_book', 'Total_Relationship_Count', 
                      'Months_Inactive', 'Contacts_Count', 'Credit_Limit', 'Total_Revolving_Bal',
                      'Total_Amt_Chng_Q4_Q1', 'Total_Trans_Amt', 'Total_Trans_Ct', 

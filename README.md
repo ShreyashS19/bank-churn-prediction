@@ -40,8 +40,7 @@ cd backend
 
 # Create and activate virtual environment
 python -m venv venv
-# On Linux/Mac
-source venv/bin/activate
+
 # On Windows
 venv\Scripts\activate
 
