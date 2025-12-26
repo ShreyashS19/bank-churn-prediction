@@ -5,6 +5,9 @@ def preprocess_data(df):
     # Handle missing values (if any)
     df = df.fillna(df.mean(numeric_only=True))
     
+    # Fallback: if still NaN after mean (single-row case), fill with 0
+    df = df.fillna(0)
+
     # Ensure correct column types
     categorical_cols = ['Gender', 'Education', 'Marital_Status', 'Income', 'Card_Category']
     

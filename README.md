@@ -13,6 +13,8 @@ It combines a **Flask backend** (machine learning model) and a **React frontend*
 * Download predictions as a `.csv` with an extra **Prediction** column.
 * Example input/output files included for testing.
 
+
+* Frontend → app.py → preprocessing → encoder/scaler → model → prediction → back to frontend
 ---
 
 ## 📦 Tech Stack

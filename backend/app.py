@@ -4,10 +4,11 @@ import pandas as pd
 import joblib
 import os
 
-app = Flask(__name__)
-CORS(app)  # Enable CORS to allow frontend requests
+from preprocess import preprocess_data
 
-# Load the model (adjust path if needed)
+app = Flask(__name__)
+CORS(app)  
+
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 MODEL_PATH = os.path.join(BASE_DIR, "model.pkl")
 
@@ -20,6 +21,7 @@ def predict():
         data = request.get_json()
         df = pd.DataFrame(data)
         
+        df = preprocess_data(df) 
         # Store original column order before any modifications
         original_columns = df.columns.tolist()
         
