@@ -17,7 +17,10 @@ def preprocess_data(df):
                      'Total_Ct_Chng_Q4_Q1', 'Avg_Utilization_Ratio']
     
     # Convert categorical columns to string
+    # for col in categorical_cols:
+    #     df[col] = df[col].astype(str)
     for col in categorical_cols:
-        df[col] = df[col].astype(str)
-    
+        if col in df.columns:
+            df[col] = df[col].astype(str)
+
     return df
